@@ -1,6 +1,7 @@
 services:
   TaskNoteTaker:
-    image: chrisvel/TaskNoteTaker:latest
+    build: .
+    image: TaskNoteTaker:local
     container_name: TaskNoteTaker
     environment:
       - TASKNOTETAKER_USER_EMAIL=admin@example.com
@@ -9,6 +10,8 @@ services:
       - TASKNOTETAKER_ALLOWED_ORIGINS=http://localhost:3002
       - TASKNOTETAKER_TRUST_PROXY=false
       - TASKNOTETAKER_UPLOAD_PATH=/app/backend/uploads
+      - RATE_LIMITING_ENABLED=${RATE_LIMITING_ENABLED:-true}
+      - COOKIE_SECURE=${COOKIE_SECURE:-true}
       # Runtime UID/GID configuration - set these to match your host user/group
       - PUID=1001
       - PGID=1001
