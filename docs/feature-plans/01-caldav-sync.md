@@ -236,7 +236,7 @@ backend/modules/caldav/
 | `priority` (0-2) | `PRIORITY` | Inverse scale (0→7, 1→5, 2→3) |
 | `recurrence_*` | `RRULE` | Generate RRULE string |
 | `parent_task_id` | `RELATED-TO` | Parent UID |
-| Custom | `X-TUDUDI-*` | Extended properties |
+| Custom | `X-TASKNOTETAKER-*` | Extended properties |
 
 **Status Mapping:**
 ```javascript
@@ -667,9 +667,9 @@ CALDAV_LOG_REQUESTS=false
 ## Known Limitations
 
 1. **Subtasks:** RELATED-TO property used, but not all clients support hierarchical rendering
-2. **Habit Mode:** Stored in X-TUDUDI-* properties, not visible in external clients
+2. **Habit Mode:** Stored in X-TASKNOTETAKER-* properties, not visible in external clients
 3. **Tags:** Exported as CATEGORIES, but tag colors/metadata only in TaskNoteTaker
-4. **Projects:** Stored in X-TUDUDI-PROJECT-UID, external clients won't show association
+4. **Projects:** Stored in X-TASKNOTETAKER-PROJECT-UID, external clients won't show association
 5. **Status Granularity:** 7 TaskNoteTaker statuses mapped to 4 iCalendar statuses (some nuance lost)
 6. **Timezone Handling:** Always use UTC in VTODO, convert in UI (document per-client quirks)
 7. **Large Recurring Sequences:** Expanding far into the future creates many VTODOs (configurable limit)

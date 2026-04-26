@@ -1,6 +1,6 @@
 const {
     STATUS_TASKNOTETAKER_TO_ICAL,
-    STATUS_ICAL_TO_TUDUDI,
+    STATUS_ICAL_TO_TASKNOTETAKER,
     TaskNoteTakerToIcalPriority,
     icalToTaskNoteTakerPriority,
     WEEKDAY_MAP,
@@ -20,10 +20,10 @@ describe('CalDAV Field Mappings', () => {
         });
 
         it('should map iCalendar statuses to TaskNoteTaker statuses', () => {
-            expect(STATUS_ICAL_TO_TUDUDI['NEEDS-ACTION']).toBe(0);
-            expect(STATUS_ICAL_TO_TUDUDI['IN-PROCESS']).toBe(1);
-            expect(STATUS_ICAL_TO_TUDUDI['COMPLETED']).toBe(2);
-            expect(STATUS_ICAL_TO_TUDUDI['CANCELLED']).toBe(5);
+            expect(STATUS_ICAL_TO_TASKNOTETAKER['NEEDS-ACTION']).toBe(0);
+            expect(STATUS_ICAL_TO_TASKNOTETAKER['IN-PROCESS']).toBe(1);
+            expect(STATUS_ICAL_TO_TASKNOTETAKER['COMPLETED']).toBe(2);
+            expect(STATUS_ICAL_TO_TASKNOTETAKER['CANCELLED']).toBe(5);
         });
     });
 

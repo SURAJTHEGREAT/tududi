@@ -532,7 +532,7 @@ function vtodoToTask(vtodoString) {
     p.name.startsWith('x-TaskNoteTaker-')
   );
   customProps.forEach(prop => {
-    // Handle X-TUDUDI-* properties
+    // Handle X-TASKNOTETAKER-* properties
   });
 
   return task;

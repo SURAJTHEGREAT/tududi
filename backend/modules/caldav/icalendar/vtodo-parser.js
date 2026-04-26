@@ -1,6 +1,6 @@
 const ICAL = require('ical.js');
 const {
-    STATUS_ICAL_TO_TUDUDI,
+    STATUS_ICAL_TO_TASKNOTETAKER,
     icalToTaskNoteTakerPriority,
 } = require('./field-mappings');
 const { parseRRULE } = require('./rrule-parser');
@@ -57,7 +57,7 @@ async function parseVTODOToTask(vtodoString) {
 
         const status = vtodo.getFirstPropertyValue('status');
         if (status) {
-            task.status = STATUS_ICAL_TO_TUDUDI[status] || 0;
+            task.status = STATUS_ICAL_TO_TASKNOTETAKER[status] || 0;
         }
 
         const priority = vtodo.getFirstPropertyValue('priority');
@@ -206,7 +206,7 @@ async function parseRecurrenceOverride(vtodoString) {
 
         const status = vtodo.getFirstPropertyValue('status');
         if (status) {
-            override.status = STATUS_ICAL_TO_TUDUDI[status] || 0;
+            override.status = STATUS_ICAL_TO_TASKNOTETAKER[status] || 0;
         }
 
         const completed = vtodo.getFirstPropertyValue('completed');

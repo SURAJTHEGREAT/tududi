@@ -8,7 +8,7 @@ const STATUS_TASKNOTETAKER_TO_ICAL = {
     6: 'NEEDS-ACTION',
 };
 
-const STATUS_ICAL_TO_TUDUDI = {
+const STATUS_ICAL_TO_TASKNOTETAKER = {
     'NEEDS-ACTION': 0,
     'IN-PROCESS': 1,
     COMPLETED: 2,
@@ -62,7 +62,7 @@ const WEEKDAY_REVERSE_MAP = {
 
 module.exports = {
     STATUS_TASKNOTETAKER_TO_ICAL,
-    STATUS_ICAL_TO_TUDUDI,
+    STATUS_ICAL_TO_TASKNOTETAKER,
     TaskNoteTakerToIcalPriority,
     icalToTaskNoteTakerPriority,
     WEEKDAY_MAP,

@@ -122,10 +122,10 @@ END:VCALENDAR`;
         expect(task.parent_task_uid).toBe('parent-task-456');
     });
 
-    it('should parse X-TUDUDI-PROJECT-UID custom property', async () => {
+    it('should parse X-TASKNOTETAKER-PROJECT-UID custom property', async () => {
         const vtodo = basicVTODO.replace(
             'END:VTODO',
-            'X-TUDUDI-PROJECT-UID:project-789\nEND:VTODO'
+            'X-TASKNOTETAKER-PROJECT-UID:project-789\nEND:VTODO'
         );
         const task = await parseVTODOToTask(vtodo);
         expect(task.project_uid).toBe('project-789');
@@ -143,9 +143,9 @@ END:VCALENDAR`;
     it('should parse habit mode custom properties', async () => {
         const vtodo = basicVTODO.replace(
             'END:VTODO',
-            `X-TUDUDI-HABIT-MODE:true
-X-TUDUDI-HABIT-STREAK:5
-X-TUDUDI-HABIT-COMPLETIONS:42
+            `X-TASKNOTETAKER-HABIT-MODE:true
+X-TASKNOTETAKER-HABIT-STREAK:5
+X-TASKNOTETAKER-HABIT-COMPLETIONS:42
 END:VTODO`
         );
         const task = await parseVTODOToTask(vtodo);
@@ -154,10 +154,10 @@ END:VTODO`
         expect(task.habit_total_completions).toBe(42);
     });
 
-    it('should parse X-TUDUDI-ORDER custom property', async () => {
+    it('should parse X-TASKNOTETAKER-ORDER custom property', async () => {
         const vtodo = basicVTODO.replace(
             'END:VTODO',
-            'X-TUDUDI-ORDER:10\nEND:VTODO'
+            'X-TASKNOTETAKER-ORDER:10\nEND:VTODO'
         );
         const task = await parseVTODOToTask(vtodo);
         expect(task.order).toBe(10);

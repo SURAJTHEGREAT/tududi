@@ -556,9 +556,9 @@ CalDAV uses inverse priority scale (1=highest, 9=lowest):
 
 TaskNoteTaker-specific features are stored as extended properties:
 
-- `X-TUDUDI-HABIT-MODE`: Habit tracking settings
-- `X-TUDUDI-PROJECT-UID`: Project association
-- `X-TUDUDI-TAGS`: Task tags (comma-separated)
+- `X-TASKNOTETAKER-HABIT-MODE`: Habit tracking settings
+- `X-TASKNOTETAKER-PROJECT-UID`: Project association
+- `X-TASKNOTETAKER-TAGS`: Task tags (comma-separated)
 
 These fields are preserved but may not be visible in external clients.
 
@@ -702,7 +702,7 @@ CALDAV_LOG_REQUESTS=false                    # Log all CalDAV requests
 1. **Subtasks:** Supported via RELATED-TO, but not all clients render hierarchically
 2. **Habit Mode:** Stored in custom fields, not visible in external clients
 3. **Tags:** Exported as CATEGORIES, but colors/metadata only in TaskNoteTaker
-4. **Projects:** Association stored in X-TUDUDI-PROJECT-UID, not shown externally
+4. **Projects:** Association stored in X-TASKNOTETAKER-PROJECT-UID, not shown externally
 5. **Status Granularity:** 7 TaskNoteTaker statuses mapped to 4 CalDAV statuses (some nuance lost)
 6. **Timezone Handling:** All dates stored as UTC; local timezone conversion in clients
 7. **Large Recurring Sequences:** Expanding far into future creates many VTODOs (configurable limit)
