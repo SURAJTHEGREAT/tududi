@@ -189,7 +189,7 @@ const Login: React.FC = () => {
                                 : 'wide-logo-dark.png'
                         )}
                         alt="TaskNoteTaker"
-                        className="h-9 w-auto"
+                        className="h-10 w-auto"
                     />
                 </div>
             </nav>

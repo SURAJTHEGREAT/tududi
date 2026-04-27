@@ -1,7 +1,7 @@
 services:
   TaskNoteTaker:
     build: .
-    image: TaskNoteTaker:local
+    image: tasknotetaker:local
     container_name: TaskNoteTaker
     environment:
       - TASKNOTETAKER_USER_EMAIL=admin@example.com
